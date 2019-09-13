@@ -1,0 +1,16 @@
+.charCard {
+  background-color: black;
+  border-radius: 5px;
+  width: 500px;
+  margin: 10px;
+}
+.skew {
+  transform: perspective(300px) rotateX(25deg);
+}
+h1 {
+  font-family: "Rubik Mono One", sans-serif;
+  color: goldenrod;
+}
+p {
+  color: goldenrod;
+}
