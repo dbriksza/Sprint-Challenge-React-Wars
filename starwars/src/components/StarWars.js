@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import StarWarsCard from "./StarWarsCard";
+import StarWarsCard from "./CharacterCard";
 import axios from "axios";
 
 export default function StarWars() {
@@ -8,8 +8,9 @@ export default function StarWars() {
   useEffect(() => {
     const getChar = async () => {
       try {
-        const response = await axios.get("http swapi.co/api/people/");
-        const person = response;
+        const response = await axios.get("https://swapi.co/api/people/");
+        const person = response.data.results;
+        console.log(response);
         setChar(person);
       } catch (error) {
         console.log("Star Wars Machine broke: ", error);
